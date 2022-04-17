@@ -15,7 +15,7 @@ private static boolean isValid(int coordinate) {
     return coordinate >= 0 && coordinate <= 7;
     }
 
-    public static void main(String[] atgs) {
+    public static void main(String[] args) {
        int rsl = ChessBoard.way(6, 7, 1, 2);
         System.out.println(rsl);
     }
