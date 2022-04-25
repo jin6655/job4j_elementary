@@ -1,0 +1,25 @@
+package ru.job4j.array;
+
+import org.junit.Test;
+
+import static org.junit.Assert.*;
+
+public class MInTest {
+
+    @Test
+    public void whenFirstMin() {
+        int[] array = new int[] {0, 5, 10};
+        int result = Min.findMin(array);
+        int expected = 0;
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void whenLastMin() {
+        int[] array = new int[] {10, 5, 3};
+        int result = Min.findMin(array);
+        int expected = 3;
+        assertEquals(expected, result);
+    }
+
+}
