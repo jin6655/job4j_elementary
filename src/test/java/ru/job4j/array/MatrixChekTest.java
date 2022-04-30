@@ -38,7 +38,7 @@ public class MatrixChekTest {
                 {' ', ' ', 'X'}
         };
         int row = 2;
-        boolean result = MatrixChek.monovertical(input, row);
+        boolean result = MatrixChek.monoVertical(input, row);
         assertTrue(result);
     }
 
@@ -50,7 +50,7 @@ public class MatrixChekTest {
                 {' ', ' ', 'X'}
         };
         int row = 0;
-        boolean result = MatrixChek.monovertical(input, row);
+        boolean result = MatrixChek.monoVertical(input, row);
         assertFalse(result);
     }
 
@@ -90,4 +90,42 @@ public class MatrixChekTest {
         assertArrayEquals(expected, result);
     }
 
+    @Test
+    public void whenDataMonoByTrueThenTrue() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixChek.isWin(input);
+        assertTrue(result);
+    }
+
+    @Test
+    public void whenDataNotMonoByTrueThenFalse() {
+        char[][] input = {
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', 'X', ' ', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixChek.isWin(input);
+        assertFalse(result);
+    }
+
+    @Test
+    public void whenDataHMonoByTrueThenTrue() {
+        char[][] input = {
+                {' ', ' ', ' ', ' ', ' '},
+                {' ', ' ', ' ', ' ', ' '},
+                {'X', 'X', 'X', 'X', 'X'},
+                {' ', ' ', 'X', ' ', ' '},
+                {' ', ' ', 'X', ' ', ' '},
+        };
+        boolean result = MatrixChek.isWin(input);
+        assertTrue(result);
+    }
 }
