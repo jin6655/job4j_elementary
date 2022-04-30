@@ -13,4 +13,5 @@ public class Sequnce {
         array[2][1] = 8;
         array[2][2] = 9;
     }
+
 }
