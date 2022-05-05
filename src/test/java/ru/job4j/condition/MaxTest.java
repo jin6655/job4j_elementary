@@ -31,4 +31,26 @@ public class MaxTest {
         int out = Max.max(left, right);
         assertEquals(expected, out);
     }
+
+    @Test
+    public void whenFirst7Second7Third8() {
+        int first = 7;
+        int second = 7;
+        int third = 8;
+        int expected = 8;
+        int out = Max.max(first, second, third);
+        assertEquals(expected, out);
+    }
+
+    @Test
+    public void whenFirst7Second7Third8Fourth10() {
+        int first = 7;
+        int second = 7;
+        int third = 8;
+        int fourth = 10;
+        int expected = 10;
+        int out = Max.max(first, second, third, fourth);
+        assertEquals(expected, out);
+    }
+
 }
